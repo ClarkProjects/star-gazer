@@ -1,0 +1,176 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #020208;
+  color: #e2e8f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.portal-container {
+  width: 100%;
+  max-width: 850px;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 5px;
+  background: linear-gradient(45deg, #a855f7, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 2px;
+}
+
+header p {
+  color: #94a3b8;
+  margin-top: 0;
+}
+
+/* Controls Section */
+.controls-card {
+  background: #0f172a;
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid #3b82f6;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.2);
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+label {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+input[type="date"] {
+  background: #1e293b;
+  border: 1px solid #475569;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+}
+
+#warp-btn {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  color: white;
+  border: none;
+  padding: 11px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#warp-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.5);
+}
+
+/* The Viewscreen Space Window */
+.viewscreen {
+  background: #090d16;
+  border-radius: 20px;
+  padding: 30px;
+  border: 1px solid #1e293b;
+  min-height: 200px;
+  position: relative;
+}
+
+#photo-title {
+  margin-top: 0;
+  color: #60a5fa;
+}
+
+#media-container img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  margin: 20px 0;
+}
+
+#photo-explanation {
+  text-align: left;
+  line-height: 1.6;
+  color: #cbd5e1;
+  font-size: 1.05rem;
+}
+
+.loading-overlay {
+  font-size: 1.5rem;
+  color: #64748b;
+  font-style: italic;
+  padding: 5px 0;
+}
+/* Screen Switching Utility Classes */
+.hidden {
+  display: none !important;
+}
+
+/* Mode Toggles */
+.mode-toggles {
+  margin: 20px 0 30px 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.toggle-btn {
+  background: #1e293b;
+  border: 1px solid #475569;
+  color: #94a3b8;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.toggle-btn.active {
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: white;
+  border-color: #60a5fa;
+  box-shadow: 0 0 15px rgba(37, 99, 235, 0.4);
+}
+
+/* Telemetry Dashboard Box */
+.telemetry-card {
+  font-family: monospace;
+  font-size: 1.1rem;
+  justify-content: space-around !important;
+  color: #38bdf8;
+  border-color: #38bdf8;
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
+}
+
+/* Map Window Container */
+#map {
+  height: 450px;
+  width: 100%;
+  border-radius: 12px;
+  background: #0d1527;
+}
+
+/* Style override to keep the map controls looking dark and sci-fi */
+.leaflet-control-attribution {
+  background: rgba(15, 23, 42, 0.8) !important;
+  color: #64748b !important;
+}
+.leaflet-bar a {
+  background-color: #1e293b !important;
+  color: white !important;
+  border-bottom: 1px solid #475569 !important;
+}
