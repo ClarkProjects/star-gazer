@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Space Portal</title>
+  </head>
+  <body>
+
+    <div class="portal-container">
+      <header>
+        <h1>Cosmic Command Center</h1>
+        <p>Warp through space history or track human orbital assets</p>
+        
+        <div class="mode-toggles">
+          <button id="toggle-nasa" class="toggle-btn active">NASA Picture Portal</button>
+          <button id="toggle-iss" class="toggle-btn">Live ISS Tracker</button>
+        </div>
+      </header>
+
+      <div id="nasa-screen">
+        <div class="controls-card">
+          <label for="space-date">Select Earth Date:</label>
+          <input type="date" id="space-date" name="space-date">
+          <button id="warp-btn">Warp to Date</button>
+        </div>
+
+        <div class="viewscreen" id="space-viewscreen">
+          <div class="loading-overlay" id="loading-text">Awaiting Coordinates...</div>
+          <h2 id="photo-title"></h2>
+          <div id="media-container"></div>
+          <p id="photo-explanation"></p>
+        </div>
+      </div>
+
+      <div id="iss-screen" class="hidden">
+        <div class="controls-card telemetry-card">
+          <div><strong>Latitude:</strong> <span id="iss-lat">0.0000</span>°</div>
+          <div><strong>Longitude:</strong> <span id="iss-lng">0.0000</span>°</div>
+          <div><strong>Speed:</strong> <span id="iss-velocity">0</span> mph</div>
+        </div>
+        <div class="viewscreen">
+          <div id="map"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
